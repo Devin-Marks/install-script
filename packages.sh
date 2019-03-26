@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo apt install -y dpkg
+
 wget -O ./dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2019.02.14_amd64.deb
 
 sudo dpkg -i dropbox.deb

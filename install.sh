@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-
+set -e
 
 sudo add-apt-repository ppa:deadsnakes/ppa;
 sudo apt update;
