@@ -43,6 +43,10 @@ chsh -s $(which zsh);
 sudo sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="spaceship"/' ~/.zshrc
 sudo sed -i 's/plugins=.*/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
 
+sudo cp vimstuff/.vimrc ~/.vimrc
+sudo cp -r vimstuff/templates/ ~/
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 clear
 echo "Installation Successful!"
 echo "Logout for ZSH to function properly"
