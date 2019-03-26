@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-sudo add-apt-repository ppa:deadsnakes/ppa &&
+set -e
+
+sudo add-apt-repository ppa:deadsnakes/ppa;
 sudo apt update;
 
 sudo snap install discord;
