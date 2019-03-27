@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-echo "firefox"
+sudo mv firefoxprofile/* ~/.mozilla/firefox
 exit 1;

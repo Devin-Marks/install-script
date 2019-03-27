@@ -57,34 +57,34 @@ then
     sudo ./themes.sh;
     sudo ./packages.sh;
     sudo ./ext.sh;
-    echo "Todo: Edit vim rice file, side script with option for firefox addons";
+    echo "Copy files from profile starting with owsn into the default firefox profile.";
 elif [[ "$pack" == 'Y' || "$pack" == 'y' ]] && [[ "$theme" == 'Y' || "$theme" == 'y' ]] && [[ "$fox" == 'N' || "$fox" == 'n' ]]
 then
     sudo ./themes.sh;
     sudo ./packages.sh;
-    echo "Todo: Edit vim rice file, side script with option for firefox addons";
+    echo "Installation Complete!";
 elif [[ "$pack" == 'Y' || "$pack" == 'y' ]] && [[ "$theme" == 'N' || "$theme" == 'n' ]] && [[ "$fox" == 'N' || "$fox" == 'n' ]]
 then
 	sudo ./packages.sh
-	echo "Todo: Edit vim rice file, side script with option for firefox addons";
+	echo "Installation complete!";
 elif [[ "$pack" == 'Y' || "$pack" == 'y' ]] && [[ "$theme" == 'N' || "$theme" == 'n' ]] && [[ "$fox" == 'Y' || "$fox" == 'y' ]]
 then
 	sudo ./packages.sh;
 	sudo ./ext.sh;
-	echo "Todo: Edit vim rice file, side script with option for firefox addons";
+	echo "Copy files from profile starting with owsn into the default firefox profile.";
 elif [[ "$pack" == 'N' || "$pack" == 'n' ]] && [[ "$theme" == 'Y' || "$theme" == 'y' ]] && [[ "$fox" == 'Y' || "$fox" == 'y' ]]
 then
 	sudo ./themes.sh;
 	sudo ./ext.sh;
-	echo "Todo: Edit vim rice file, side script with option for firefox addons";
+	echo "Copy files from profile starting with owsn into the default firefox profile."
 elif [[ "$pack" == 'N' || "$pack" == 'n' ]] && [[ "$theme" == 'N' || "$theme" == 'n' ]] && [[ "$fox" == 'Y' || "$fox" == 'y' ]]
 then
     sudo ./ext.sh;
-    echo "Todo: Edit vim rice file, side script with option for firefox addons";
+    echo "Copy files from profile starting with owsn into the default firefox profile.";
 elif [[ "$pack" == 'N' || "$pack" == 'n' ]] && [[ "$theme" == 'Y' || "$theme" == 'y' ]] && [[ "$fox" == 'N' || "$fox" == 'n' ]]
 then
     sudo ./themes.sh;
-    echo "Todo: Side Script with option for firefox addons";
+    echo "Installation Complete!";
 else
-    echo "Todo: Side script with option for firefox addons";
+    echo "Finished!";
 fi
