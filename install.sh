@@ -52,39 +52,20 @@ read -p "Would you like to install Intelli? [Y/n] " pack
 read -p "Would you like to install GTK Theme? [Y/n] " theme
 read -p "Would you like to install Firefox profile? [Y/n] " fox
 
-if [[ "$pack" == 'Y' || "$pack" == 'y' ]] && [[ "$theme" == 'Y' || "$theme" == 'y' ]] && [[ "$fox" == 'Y' || "$fox" == 'y' ]]
+if [[ "$pack" == 'Y' || "$pack" == 'y' ]]
 then
-    sudo ./themes.sh;
     sudo ./packages.sh;
-    sudo ./ext.sh;
-    echo "Copy files from profile starting with owsn into the default firefox profile.";
-elif [[ "$pack" == 'Y' || "$pack" == 'y' ]] && [[ "$theme" == 'Y' || "$theme" == 'y' ]] && [[ "$fox" == 'N' || "$fox" == 'n' ]]
-then
-    sudo ./themes.sh;
-    sudo ./packages.sh;
-    echo "Installation Complete!";
-elif [[ "$pack" == 'Y' || "$pack" == 'y' ]] && [[ "$theme" == 'N' || "$theme" == 'n' ]] && [[ "$fox" == 'N' || "$fox" == 'n' ]]
-then
-	sudo ./packages.sh
-	echo "Installation complete!";
-elif [[ "$pack" == 'Y' || "$pack" == 'y' ]] && [[ "$theme" == 'N' || "$theme" == 'n' ]] && [[ "$fox" == 'Y' || "$fox" == 'y' ]]
-then
-	sudo ./packages.sh;
-	sudo ./ext.sh;
-	echo "Copy files from profile starting with owsn into the default firefox profile.";
-elif [[ "$pack" == 'N' || "$pack" == 'n' ]] && [[ "$theme" == 'Y' || "$theme" == 'y' ]] && [[ "$fox" == 'Y' || "$fox" == 'y' ]]
+fi
+
+if [[ "$theme" == 'Y' || "$theme" == 'y' ]]
 then
 	sudo ./themes.sh;
-	sudo ./ext.sh;
-	echo "Copy files from profile starting with owsn into the default firefox profile."
-elif [[ "$pack" == 'N' || "$pack" == 'n' ]] && [[ "$theme" == 'N' || "$theme" == 'n' ]] && [[ "$fox" == 'Y' || "$fox" == 'y' ]]
+fi
+
+if [[ "$fox" == 'Y' || "$fox" == 'y' ]]
 then
     sudo ./ext.sh;
-    echo "Copy files from profile starting with owsn into the default firefox profile.";
-elif [[ "$pack" == 'N' || "$pack" == 'n' ]] && [[ "$theme" == 'Y' || "$theme" == 'y' ]] && [[ "$fox" == 'N' || "$fox" == 'n' ]]
-then
-    sudo ./themes.sh;
-    echo "Installation Complete!";
-else
-    echo "Finished!";
+    echo "Copy files from profile starting with \"owsn\" into the default firefox profile.";
 fi
+
+echo "Installation complete!"
