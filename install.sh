@@ -48,6 +48,8 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \curl -LSso ~/.vim/autoload/pathogen.v
 
 echo "alias mux=\"tmux new-session -s \"MySession\" -d;tmux split-window -h;tmux split-window -v;tmux attach-session -d\"" >> ~/.zshrc
 
+clear
+
 echo "Installation Successful!"
 echo "Logout for ZSH to function properly"
  
