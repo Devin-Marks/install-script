@@ -57,13 +57,13 @@ clear
 echo "Installation Successful!"
 echo "Logout for ZSH to function properly"
  
-read -p "Would you like to install Intelli? [Y/n] " pack
+read -p "Would you like to install IntelliJ? [Y/n] " pack
 read -p "Would you like to install GTK Theme? [Y/n] " theme
 read -p "Would you like to install Firefox profile? [Y/n] " fox
 
 if [[ "$pack" == 'Y' || "$pack" == 'y' ]]
 then
-    sudo ./packages.sh;
+    sudo ./intellij.sh;
 fi
 
 if [[ "$theme" == 'Y' || "$theme" == 'y' ]]
