@@ -46,8 +46,11 @@ sudo cp vimstuff/.vimrc ~/.vimrc
 sudo cp -r vimstuff/templates/ ~/
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-echo "alias mux=\"tmux new-session -s \"MySession\" -d;tmux split-window -h;tmux split-window -v;tmux attach-session -d\"" >> ~/.zshrc
+echo "alias mux=\"./mux.sh\"" >> ~/.zshrc
 echo "alias clr=\"clear\"" >> ~/.zshrc
+
+cp ./.tmux.conf ~/.tmux.conf
+cp ./mux.sh ~/mux.sh
 
 clear
 
@@ -70,7 +73,7 @@ fi
 
 if [[ "$fox" == 'Y' || "$fox" == 'y' ]]
 then
-    sudo ./ext.sh;
+    sudo mv firefoxprofile/* ~/.mozilla/firefox
     echo "Copy files from profile starting with \"owsn\" into the default firefox profile.";
 fi
 
