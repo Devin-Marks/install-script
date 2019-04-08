@@ -43,7 +43,7 @@ sudo sed -i 's/plugins=.*/plugins=(git zsh-autosuggestions zsh-syntax-highlighti
 sed -i -e 's/NEWLINE=true/NEWLINE=false/g' ~/.oh-my-zsh/themes/spaceship-prompt/spaceship.zsh
 
 sudo cp vimstuff/.vimrc ~/.vimrc
-sudo cp -r vimstuff/templates/ ~/.vim/
+sudo cp -r vimstuff/templates/ ~/.vim/templates/
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 echo "alias mux=\"./mux.sh\"" >> ~/.zshrc
